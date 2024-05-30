@@ -4,54 +4,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>拾得物管理システム</title>
   </head>
   <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    
+    <nav class="navbar navbar-expand-lg " style="background-color: #89c7fa">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><i class="bi bi-search"></i> 拾得物管理システム</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
+        <span class="navbar-toggler-icon" style="color: black" > 
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物登録機能</a>
-              <ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">拾得者（ユーザ）登録 <i class="bi bi-person"></i></a></i></li>
-                <li><a class="dropdown-item" href="#">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物検索機能</a>
-              <ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">拾得物検索 <i class="bi bi-search"></i></a></li>
-                <li><a class="dropdown-item" href="#">遺失物捜索依頼 <i class="bi bi-file-earmark-check"></i></a></li>
-                <li><a class="dropdown-item" href="#">遺失物捜索一覧 <i class="bi bi-table"></i></a></li>
-              </ul>
-              </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707">
+          <div class="navbar-nav" style="color: #070707" >
+            <a class="nav-link active" aria-current="page" href="#" style="color: #070707" ><u>・利用登録</u></a>
+            <a class="nav-link" href="#" style="color: #070707"><u>・ユーザー情報</u></a>
+            <a class="nav-link" href="#" style="color: #070707"><u>・管理者メニュー</u></a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col p-5 text-white rounded mt-3 bg-success">
-                <h1 class="display-4 fst-italic">拾得物管理システム</h1>
-                <hr>
-                <p>このシステムは文教大学湘南キャンパスの施設内における拾得物を管理するためのシステムです．プロジェクト演習BCの授業において学習用の演習システムとして開発を行います．</p>
-            </div>
-        </div>
+    
         <div class="row mt-3">
             <div class="col card m-1">
                 <div class="card-body">
                     <h5 class="card-title">拾得者（ユーザ）登録</h5>
                     <hr>
                     <p class="card-text">拾得物の登録を行う際に必要となるユーザの情報を登録するための機能です</p>
-                    <a href="#" class="btn btn-success">登録する</a>
+                    <a href="#" class="btn" style="background-color:#89c7fa ;"> 登録する</a>
                 </div>
             </div>
             <div class="col card m-1">
@@ -59,7 +43,7 @@
                     <h5 class="card-title">拾得物登録</h5>
                     <hr>
                     <p class="card-text">拾得物が発生した際に，拾得物の情報をシステムに登録するための機能です</p>
-                    <a href="#" class="btn btn-success">登録する</a>
+                    <a href="#" class="btn" style="background-color: #89c7fa;">登録する</a>
                 </div>
             </div>
         </div>
@@ -69,7 +53,7 @@
                     <h5 class="card-title">拾得物検索機能</h5>
                     <hr>
                     <p class="card-text">システムに登録されている拾得物のデータを対象として検索するための機能です</p>
-                    <a href="#" class="btn btn-success">検索する</a>
+                    <a href="#" class="btn" style="background-color: #89c7fa;">検索する</a>
                 </div>
             </div>
             <div class="col card m-1">
@@ -77,8 +61,7 @@
                     <h5 class="card-title">遺失物捜索依頼</h5>
                     <hr>
                     <p class="card-text">施設内で何か物を無くした際に，遺失物の捜索依頼を出すための機能です</p>
-                    <a href="#" class="btn btn-success">依頼する</a>
-                    <a href="#" class="btn btn-success">一覧</a>
+                    <a href="#" class="btn" style="background-color: #89c7fa;">依頼する</a>
                 </div>
             </div>
         </div>
@@ -86,8 +69,8 @@
 
     
 
-    <footer class="fixed-bottom bg-success text-light text-end">
-        <div>文教大学 情報学部 情報システム学科 プロジェクト演習BC</div>
+    <footer class="fixed-bottom" style="background-color: #89c7fa;" text-light text-end>
+        <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
@@ -95,3 +78,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </body>
 </html>
+
