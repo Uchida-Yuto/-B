@@ -61,32 +61,48 @@
       border: 2px solid #000; /* ボックスのボーダー */
     }
   
-    .box1 {
+    .entry-box {
       height: 200px; /* 各ボックスの高さ */
       margin: 15px; /* マージンでボックス間のスペースを作る */
       background-color: #89c7fa; /* ボックスの背景色 */
       border: 2px solid #000; /* ボックスのボーダー */
+      display: flex;
+      flex-direction: column; /* 子要素を縦方向に配置 */
+            justify-content: center; /* 垂直方向の中央揃え */
+            align-items: center; /* 水平方向の中央揃え */
     }
-  
-    .box2 {
-      height: 200px; /* 各ボックスの高さ */
-      margin: 15px; /* マージンでボックス間のスペースを作る */
-      background-color: #89c7fa; /* ボックスの背景色 */
-      border: 2px solid #000; /* ボックスのボーダー */
+    table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+           
+        }
+        .entry-box h2 {
+            align-self: flex-start; /* h2を左揃えにする */
+            margin-left: 20px; /* 任意のマージンで調整 */
+        }
+
+    a.btn{
+      background-color: #ddff00; /* ボタンの背景色 */
+            padding: 10px 20px; /* ボタンの内側余白 */
+            text-decoration: none; /* ボタンの下線を消す */
+            color: #000; /* ボタンの文字色 */
+            border: 1px solid #000; /* ボタンのボーダー */
+            border-radius: 5px; /* ボタンの角を丸くする */
+            margin:20px;
+            width: 50%;
+            min-width: 20px;
+            max-width: 300px;
     }
-  
-    .box3 {
-      height: 200px; /* 各ボックスの高さ */
-      margin: 15px; /* マージンでボックス間のスペースを作る */
-      background-color: #89c7fa; /* ボックスの背景色 */
-      border: 2px solid #000; /* ボックスのボーダー */
-    }
-  
-    .box4 {
-      height: 200px; /* 各ボックスの高さ */
-      margin: 15px; /* マージンでボックス間のスペースを作る */
-      background-color: #89c7fa; /* ボックスの背景色 */
-      border: 2px solid #000; /* ボックスのボーダー */
+
+    .btn-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: auto; /* ボタンをボックスの下部に配置 */
     }
       </style>
   </head>
@@ -95,21 +111,33 @@
     <div class="flex_test-box">
      <div class="flex_test-item">
       <div class="box" style="text-align: center";>拾得物登録・遺失物捜索依頼</b></div>
-      <div class="box1">
-           
-      </div>
-      <div class="box2">
-           
+      <div class="entry-box">
+        <h2>aaaaaaaaaaaS</h2>
+          <div class="btn-container">
+            <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
           </div>
+       </div>
+      <div class="entry-box">
+        <h2>aaaaaaaaaaaS</h2>
+          <div class="btn-container">
+            <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
+          </div>
+       </div>
     </div>
     <div class="flex_test-item">
       <div class="box"style="text-align: center";><b>拾得物・遺失物情報</b></div>
-      <div class="box3">
-           
-     </div>
-     <div class="box4">
-        
+      <div class="entry-box">
+        <h2>aaaaaaaaaaaS</h2>
+          <div class="btn-container">
+            <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
+          </div>
        </div>
+     <div class="entry-box">
+      <h2>aaaaaaaaaaaS</h2>
+        <div class="btn-container">
+          <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
+        </div>
+     </div>
     </div>
     
 </div> 
@@ -125,4 +153,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
 
