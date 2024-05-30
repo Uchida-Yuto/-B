@@ -7,14 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>拾得物管理システム：利用登録</title>
+    <title>拾得物管理システム</title>
   </head>
   <body>
 
     
     <nav class="navbar navbar-expand-lg " style="background-color: #89c7fa">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：</a><!-- 文教大学拾得物管理システム：ページ名 -->
+        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
         <span class="navbar-toggler-icon" style="color: black" > 
         </button>
@@ -27,81 +27,8 @@
         </div>
       </div>
     </nav>
-<style>
-  .registration-form {
-  
-    font-size: 12px;
-  width: fit-content;
-  padding: 20px;
-  background: #dadada;
-  border-radius: 15px;
-  margin: auto;
-}
 
-h2 {
-  grid-column: span 2;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 150px 300px;
-  grid-gap: 15px;
-}
-
-input:not([type='checkbox']) {
-  width: 100%;
-  height: 30px;
-}
-
-textarea {
-  width: 100%;
-}
-
-.hobby-selection {
-  display: flex;
-}
-
-.hobby-selection label {
-  padding-top: 2px;
-  margin-right: 10px;
-}
-
-button {
-  grid-column: span 2;
-  justify-self: end;
-}
-  </style>
     
-    <div class="registration-form"  >
-
-      <form action="#" method="post">
-        <h2><u>利用登録</u></h2><!-- <u>ページ機能名</u> -->
-    
-        <label for="user-name">ユーザー名 (任意)：</label><!-- idとnameをデータベースと揃える -->　
-        <input id="ユーザ" type="text" name="user-name" >
-
-        <label for="affiliation">所属 (必須)：</label>
-        <input id="所属" type="text" name="affiliation">
-
-        <label for="faculty">学部学科 (必須)：</label>
-        <input id="学部学科" type="text" name="faculty" >
-
-        <label for="number">学籍番号 (必須)：</label>
-        <input id="学籍番号" type="text" name="numbar">
-
-        <label for="tel">電話番号 (任意)：</label>
-        <input id="電話番号" type="text" name="numbar">
-        
-        <label for="e-mail">Eメール (必須)</label>
-        <input id="メールアドレス" type="email" name="e-mail" >
-    
-        <label for="password">パスワード</label>
-        <input id="password" type="password" name="password" >
-
-        <input type="button" value="戻る" onClick="history.back()">
-        <button type="submit">登録する</button>
-      </form>
-    </div>
 
     
 
