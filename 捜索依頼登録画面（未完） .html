@@ -14,7 +14,7 @@
     
     <nav class="navbar navbar-expand-lg " style="background-color: #89c7fa">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：利用登録画面</a>
+        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：捜索依頼申請画面</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
         <span class="navbar-toggler-icon" style="color: black" > 
         </button>
@@ -75,28 +75,41 @@ button {
     <div class="registration-form"  >
 
       <form action="#" method="post">
-        <h2><u>利用登録</u></h2>
+        <h2><u>遺失物捜索依頼</u></h2>
     
-        <label for="user-name">ユーザー名 (任意)：</label>
-        <input id="ユーザ" type="text" name="user-name" >
+        <label for="los-name">物品名：</label>
+        <input id="物品名" type="text" name="los-name" >
 
-        <label for="affiliation">所属 (必須)：</label>
-        <input id="所属" type="text" name="affiliation">
+        <label for="los-color"> 遺失物の色：</label>
+        <input id="遺失物色" type="text" name="color">
 
-        <label for="faculty">学部学科 (必須)：</label>
-        <input id="学部学科" type="text" name="faculty" >
+        <label for="los-features">遺失物の特長：</label>
+        <input id="遺失物特長" type="text" name="los-features" >
 
-        <label for="number">学籍番号 (必須)：</label>
-        <input id="学籍番号" type="text" name="numbar">
+        <label for="los-day">遺失日：</label>
+        <input id="遺失日" type="date" name="los-day">
 
-        <label for="tel">電話番号 (任意)：</label>
-        <input id="電話番号" type="text" name="numbar">
+        <label for="tel">遺失場所：</label>
+        <input id="遺失場所" type="text" name="numbar">
         
-        <label for="e-mail">Eメール (必須)</label>
-        <input id="e-mail" type="email" name="e-mail" >
-    
-        <label for="password">パスワード</label>
-        <input id="password" type="password" name="password" >
+        <label for="faculty">遺失物分類 ：</label>
+        <select name="example1">
+          <datalist id="list">
+            <option value="現金">現金</option>
+            <option value="かばん類">かばん類</option>
+            <option value="袋・封筒類">袋・封筒類</option>
+            <option value="財布類">財布類</option>
+            <option value="鍵類">鍵類</option>
+            <option value="手帳・文具類">手帳・文具類</option>
+            <option value="書類・紙類">書類・紙類</option>
+            <option value="時計類">時計類</option>
+            <option value="傘">傘</option>
+            <option value="電気製品類">電気製品類</option>
+            <option value="貴金属類">貴金属類</option>
+            <option value="その他">その他</option>
+          </select>
+          
+
 
         <input type="button" value="戻る" onClick="history.back()">
         <button type="submit">登録する</button>
