@@ -55,21 +55,33 @@
   }
   
   .box {
-      height: 27px; /* 各ボックスの高さ */
+      height: 80px; /* 各ボックスの高さ */
       margin: 15px; /* マージンでボックス間のスペースを作る */
       background-color: #89c7fa; /* ボックスの背景色 */
       border: 2px solid #000; /* ボックスのボーダー */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color:#000;
+      overflow: hidden;
+      
+      
+      
+      
     }
   
     .entry-box {
-      height: 200px; /* 各ボックスの高さ */
+      height: 150px; /* 各ボックスの高さ */
       margin: 15px; /* マージンでボックス間のスペースを作る */
       background-color: #89c7fa; /* ボックスの背景色 */
       border: 2px solid #000; /* ボックスのボーダー */
       display: flex;
       flex-direction: column; /* 子要素を縦方向に配置 */
-            justify-content: center; /* 垂直方向の中央揃え */
-            align-items: center; /* 水平方向の中央揃え */
+      justify-content: center; /* 垂直方向の中央揃え */
+      align-items: center; /* 水平方向の中央揃え */
+      color:#000;
+      font-size: clamp(16px, 3.8vw, 40px);
+      
     }
     table {
             border-collapse: collapse;
@@ -104,36 +116,38 @@
             width: 100%;
             margin-top: auto; /* ボタンをボックスの下部に配置 */
     }
+
+   
       </style>
   </head>
   <body>
     
     <div class="flex_test-box">
      <div class="flex_test-item">
-      <div class="box" style="text-align: center";>拾得物登録・遺失物捜索依頼</b></div>
-      <div class="entry-box">
-        <h2>aaaaaaaaaaaS</h2>
+      <div class="box" style="font-size: clamp(10px, 3.8vw, 40px);" ><b>拾得物登録・捜索依頼</b></div>
+      <div class="entry-box"style="font-size: clamp(16px, 3.8vw, 30px);">
+        <h2><p>aaaaaaaaaaaS</p></h2>
           <div class="btn-container">
             <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
           </div>
        </div>
-      <div class="entry-box">
-        <h2>aaaaaaaaaaaS</h2>
+       <div class="entry-box"style="font-size: clamp(16px, 3.8vw, 30px);">
+       <h2><p>aaaaaaaaaaaS</p></h2>
           <div class="btn-container">
             <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
           </div>
        </div>
     </div>
     <div class="flex_test-item">
-      <div class="box"style="text-align: center";><b>拾得物・遺失物情報</b></div>
-      <div class="entry-box">
-        <h2>aaaaaaaaaaaS</h2>
+      <div class="box"style="font-size: clamp(10px, 3.8vw, 40px);"><b>拾得物・遺失物情報</b></div>
+      <div class="entry-box"style="font-size: clamp(16px, 3.8vw, 30px);">
+        <h2><p>aaaaaaaaaaaS</p></h2>
           <div class="btn-container">
             <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
           </div>
        </div>
-     <div class="entry-box">
-      <h2>aaaaaaaaaaaS</h2>
+       <div class="entry-box"style="font-size: clamp(16px, 3.8vw, 30px);">
+        <h2><p>aaaaaaaaaaaS</p></h2>
         <div class="btn-container">
           <a href="#" class="btn" style="background-color:#ddff00 ;"> 登録する</a>
         </div>
