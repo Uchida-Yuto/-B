@@ -36,6 +36,7 @@
   background: #dadada;
   border-radius: 15px;
   margin: auto;
+  margin-top: 40px;
 }
 
 h2 {
@@ -66,10 +67,16 @@ textarea {
   margin-right: 10px;
 }
 
-button {
-  grid-column: span 2;
-  justify-self: end;
-}
+.equal-height-buttons {
+    height: 30px;
+    width: 150px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .btn {
+    height: auto;
+  }
   </style>
     
     <div class="registration-form"  >
@@ -98,15 +105,15 @@ button {
         <label for="password">パスワード</label>
         <input id="password" type="password" name="password" >
 
-        <input type="button" value="戻る" onClick="history.back()">
-        <button type="submit">登録する</button>
+        <input type="button" value="戻る" onClick="history.back()" class="equal-height-buttons">
+        <button type="submit" class="equal-height-buttons">登録する</button>
       </form>
     
     </div>
 
     
 
-    <footer class="fixed-bottom" style="background-color: #89c7fa;" text-light text-end>
+    <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
         <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
     </footer>
 
