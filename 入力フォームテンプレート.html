@@ -33,9 +33,10 @@
     font-size: 12px;
   width: fit-content;
   padding: 20px;
-  background: #dadada;
+  background: #ddd8d8cf;
   border-radius: 15px;
   margin: auto;
+  margin-top: 50px;
 }
 
 h2 {
@@ -65,11 +66,18 @@ textarea {
   padding-top: 2px;
   margin-right: 10px;
 }
+.button-container {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+      }
 
-button {
-  grid-column: span 2;
-  justify-self: end;
-}
+      .button-container input,
+      .button-container button {
+        width: 48%;
+        height: 30px;
+      }
+
   </style>
     
     <div class="registration-form"  >
@@ -98,8 +106,9 @@ button {
         <label for="password">パスワード</label>
         <input id="password" type="password" name="password" >
 
-        <input type="button" value="戻る" onClick="history.back()">
-        <button type="submit">登録する</button>
+        <div class="button-container">
+          <input type="button" value="戻る" onClick="history.back()">
+          <button type="submit">登録する</button>
       </form>
     
     </div>
