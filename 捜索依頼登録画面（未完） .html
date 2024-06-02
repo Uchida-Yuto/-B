@@ -36,6 +36,7 @@
   background: #dadada;
   border-radius: 15px;
   margin: auto;
+  margin-top: 50px;
 }
 
 h2 {
@@ -65,6 +66,18 @@ textarea {
   padding-top: 2px;
   margin-right: 10px;
 }
+
+.button-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-container input,
+  .button-container button {
+    width: 48%;
+    height: 30px; /* 任意の高さを指定 */
+  }
 
 button {
   grid-column: span 2;
@@ -109,10 +122,10 @@ button {
             <option value="その他">その他</option>
           </select>
           
-
-
-        <input type="button" value="戻る" onClick="history.back()">
-        <button type="submit">登録する</button>
+          <div class="button-container">
+            <input type="button" value="戻る" onClick="history.back()">
+            <button type="submit">登録する</button>
+          </div>
       </form>
     
     </div>
