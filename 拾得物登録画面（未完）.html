@@ -28,9 +28,9 @@
       </div>
     </nav>
 <style>
-  .registration-form {
+ .registration-form {
   
-    font-size: 12px;
+  font-size: 12px;
   width: fit-content;
   padding: 20px;
   background: #ddd8d8cf;
@@ -67,6 +67,18 @@ textarea {
   margin-right: 10px;
 }
 
+.button-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-container input,
+  .button-container button {
+    width: 48%;
+    height: 30px;
+  }
+
 button {
   grid-column: span 2;
   justify-self: end;
@@ -100,7 +112,7 @@ button {
 
         <label for="faculty">拾得物分類 ：</label>
         <select name="example1">
-          <datalist id="list">
+          <datalist id="拾得物分類">
             <option value="現金">現金</option>
             <option value="かばん類">かばん類</option>
             <option value="袋・封筒類">袋・封筒類</option>
@@ -114,14 +126,15 @@ button {
             <option value="貴金属類">貴金属類</option>
             <option value="その他">その他</option>
           </select>
-          <input id="拾得物分類" type="txt" name="faculty" >
 
 
-        <input type="button" value="戻る" onClick="history.back()">
-        <button type="submit">登録する</button>
+          <div class="button-container">
+            <input type="button" value="戻る" onClick="history.back()">
+            <button type="submit">登録する</button>
+          </div>
       </form>
-    
     </div>
+  
 
     
 
