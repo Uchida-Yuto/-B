@@ -7,14 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>拾得物管理システム：受け取り申請</title>
+    <title>拾得物管理システム：利用登録</title>
   </head>
   <body>
 
     
-    <nav class="navbar navbar-expand-lg " style="background-color: #89c7fa">
+    <nav class="navbar navbar-expand-lg " style="background-color: #a4d6ff">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：受け取り申請画面</a>
+        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：利用登録画面</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
         <span class="navbar-toggler-icon" style="color: black" > 
         </button>
@@ -22,8 +22,8 @@
           <div class="navbar-nav" style="color: #070707" >
             <a class="nav-link active" aria-current="page" href="#" style="color: #070707" ><u>・拾得物登録</u></a> <!-- href="繋がるページのリンク" -->
             <a class="nav-link" href="#" style="color: #070707"><u>・捜索依頼届</u></a>                             <!-- 制作するページによって<u>・no text</u>部分のテキストの変更 -->
+            <a class="nav-link" href="#" style="color: #070707"><u>・拾得物一覧</u></a>
             <a class="nav-link" href="#" style="color: #070707"><u>・捜索依頼届一覧</u></a>
-            <a class="nav-link" href="#" style="color: #070707"><u>・ユーザー情報</u></a>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
     font-size: 12px;
   width: fit-content;
   padding: 20px;
-  background: #dadada;
+  background: #ddd8d8cf;
   border-radius: 15px;
   margin: auto;
   margin-top: 50px;
@@ -68,43 +68,49 @@ textarea {
   margin-right: 10px;
 }
 
-.equal-height-buttons {
-    height: 30px;
-    width: 150px;
-    margin-left: 80px;
-    margin-right: 80px;
-  }
+.button-container {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+      }
 
-  .btn {
-    height: auto;
-  }
-  </style>
+      .button-container input[type='button'],
+      .button-container button {
+        width: 48%;
+        height: 30px; 
+      }
+
+    </style>
     
     <div class="registration-form"  >
 
       <form action="#" method="post">
-        <h2><u>拾得物受け取り申請画面</u></h2>
+        <h2><u>利用登録</u></h2>
     
-        <label for="name">氏名：</label>
-        <input id="ユーザ" type="text" name="name" >
+        <label for="user-name">氏名 (任意)：</label>
+        <input id="ユーザ" type="text" name="user-name" >
 
-        <label for="request-day">受け取り希望日程：</label>
-        <input id="希望日程" type="date" name="affiliation">
+        <label for="affiliation">所属 (必須)：</label>
+        <input id="所属" type="text" name="affiliation">
 
-        <label for="request-time">受け取り希望時間：</label>
-        <input id="希望時間" type="time" name="faculty" >
+        <label for="faculty">学部学科 (必須)：</label>
+        <input id="学部学科" type="text" name="faculty" >
+
+        <label for="number">学籍番号 (必須)：</label>
+        <input id="学籍番号" type="text" name="numbar">
 
         <label for="tel">電話番号 (任意)：</label>
-        <input id="電話番号" type="tel" name="request-time">
+        <input id="電話番号" type="text" name="numbar">
         
-        <label for="remarks">備考</label>
-        <input id="備考" type="text" name="remarks" >
+        <label for="e-mail">Eメール (必須)</label>
+        <input id="e-mail" type="email" name="e-mail" >
     
         <label for="password">パスワード</label>
         <input id="password" type="password" name="password" >
 
-        <input type="button" value="戻る" onClick="history.back()" class="equal-height-buttons">
-        <button type="submit" class="equal-height-buttons">申請する</button>
+        <div class="button-container">
+          <input type="button" value="戻る" onClick="history.back()">
+          <button type="submit">登録する</button>
       </form>
     
     </div>
@@ -114,9 +120,10 @@ textarea {
     <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
         <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
     </footer>
-
+  
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </body>
 </html>
+
