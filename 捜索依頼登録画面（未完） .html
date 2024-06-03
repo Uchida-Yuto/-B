@@ -34,9 +34,10 @@
     font-size: 12px;
   width: fit-content;
   padding: 20px;
-  background: #dadada;
+  background: #ddd8d8cf;
   border-radius: 15px;
   margin: auto;
+  margin-top: 50px;
 }
 
 h2 {
@@ -66,6 +67,18 @@ textarea {
   padding-top: 2px;
   margin-right: 10px;
 }
+
+.button-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-container input,
+  .button-container button {
+    width: 48%;
+    height: 30px;
+  }
 
 button {
   grid-column: span 2;
@@ -110,17 +123,17 @@ button {
             <option value="その他">その他</option>
           </select>
           
-
-
-        <input type="button" value="戻る" onClick="history.back()">
-        <button type="submit">登録する</button>
+          <div class="button-container">
+            <input type="button" value="戻る" onClick="history.back()">
+            <button type="submit">登録する</button>
+          </div>
       </form>
     
     </div>
 
     
 
-    <footer class="fixed-bottom" style="background-color: #89c7fa;" text-light text-end>
+    <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
         <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
     </footer>
 
