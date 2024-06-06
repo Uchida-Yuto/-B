@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遺失物管理システム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>遺失物管理システム：申請者情報</h1>
+        <form>
+            <table>
+                <tr>
+                    <td colspan="2"><h2>拾得物受け取り申請者情報：</h2></td>
+                </tr>
+                <tr>
+                    <td>氏名</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>学籍番号</td>
+                    <td><input type="text" name="student_id"></td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>受け取り希望日</td>
+                    <td><input type="date" name="pickup_date"></td>
+                </tr>
+                <tr>
+                    <td>希望時間</td>
+                    <td><input type="time" name="pickup_time"></td>
+                </tr>
+                <tr>
+                    <td>備考</td>
+                    <td><textarea name="remarks"></textarea></td>
+                </tr>
+            </table>
+            <button type="submit">戻る</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,157 +1,80 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <title>文教大学拾得物管理システム</title>
-  <style>
-    .flex_test-box {
-      background-color: #faf7f7;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-    }
-
-    .flex_test-item,
-    .flex_test-item2 {
-      padding: 10px;
-      color: #000; /* 文字色 */
-      background-color: #ddd8d8cf;
-      margin: 5px; /* 外側の余白 */
-      border-radius: 5px; /* 角丸指定 */
-      width: 80%; /* 幅を80%に設定 */
-      min-height: 300px; /* 高さの最小値を設定 */
-    }
-
-    .flex_test-item2 {
-      flex-grow: 1; /* 高さを最大限に拡張 */
-    }
-
-    .box {
-      height: 80px; /* 各ボックスの高さ */
-      margin: 20px; /* マージンでボックス間のスペースを作る */
-      background-color: #ffffff; /* ボックスの背景色 */
-      border: 2px solid #000; /* ボックスのボーダー */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #000;
-      overflow: visible;
-    }
-
-    .entry-box,
-    .entry-box2 {
-      font-size: clamp(16px, 3.8vw, 40px);
-      height: 150px; /* 各ボックスの高さ */
-      margin: 15px; /* マージンでボックス間のスペースを作る */
-      background-color: #a4d6ff;
-      border: 2px solid #000; /* ボックスのボーダー */
-      display: flex;
-      flex-direction: column; /* 子要素を縦方向に配置 */
-      justify-content: center; /* 垂直方向の中央揃え */
-      align-items: center; /* 水平方向の中央揃え */
-      color: #000;
-      overflow: visible;
-    }
-
-    .entry-box h2 {
-      align-self: flex-start; /* h2を左揃えにする */
-      margin-left: 20px; /* 任意のマージンで調整 */
-    }
-
-    a.btn {
-      background-color: #ffffff; /* ボタンの背景色 */
-      padding: 10px 20px; /* ボタンの内側余白 */
-      text-decoration: none; /* ボタンの下線を消す */
-      color: #000; /* ボタンの文字色 */
-      border: 1px solid #000; /* ボタンのボーダー */
-      border-radius: 5px; /* ボタンの角を丸くする */
-      margin: 20px;
-      width: 50%;
-      min-width: 20px;
-      max-width: 300px;
-      font-size: clamp(11px, 1.8vw, 30px);
-    }
-
-    .btn-container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: auto; /* ボタンをボックスの下部に配置 */
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-    }
-
-    body, html {
-      height: 100%;
-      margin: 0;
-    }
-
-    .flex_test-box {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  </style>
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg " style="background-color: #a4d6ff" style="font-size: clamp(16px, 3.8vw, 40px);">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" style="color: #070707"><b>文教大学拾得物管理システム：管理者メニュー</b></a>
-      <div class="navbar-nav" style="color: #070707">
-        <a class="nav-link " aria-current="page" href="#" style="color: #070707"><u>・トップへ戻る</u></a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707"></div>
-    </div>
-  </nav>
-  
-  <div class="flex_test-box">
-    <div class="flex_test-item">
-      <div class="box" style="font-size: clamp(8px, 2.8vw, 30px);"><b>受け取り申請</b></div>
-      <div class="entry-box" style="font-size: clamp(20px, 1.5vw, 30px);">
-        <u style="margin-top: 20px;">拾得物受け取り申請</u>
-        <div class="btn-container">
-          <a href="#" class="btn" style="background-color:#ffffff;"><b>受け取り申請一覧</b></a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>拾得物管理システム</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg " style="background-color: #89c7fa">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
+        <span class="navbar-toggler-icon" style="color: black" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707">
+          <div class="navbar-nav" style="color: #070707" >
+            <a class="nav-link active" aria-current="page" href="#" style="color: #070707" ><u>・no text</u></a> <!-- href="繋がるページのリンク" -->
+            <a class="nav-link" href="#" style="color: #070707"><u>・no text</u></a>                             <!-- 制作するページによって<u>・no text</u>部分のテキストの変更 -->
+            <a class="nav-link" href="#" style="color: #070707"><u>・no text</u></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex_test-item2">
-      <div class="box" style="font-size: clamp(8px, 2.8vw, 30px);"><b>情報編集・利用者情報</b></div>
-      <div class="entry-box2" style="font-size: clamp(20px, 1.5vw, 30px);">
-        <u style="margin-top: 20px;">拾得物の情報変更</u>
-        <div class="btn-container">
-          <a href="#" class="btn" style="background-color:#ffffff;"><b>拾得物情報変更</b></a>
-        </div>
-      </div>
-      <div class="entry-box2" style="font-size: clamp(20px, 1.5vw, 30px);">
-        <u style="margin-top: 20px;">利用者情報一覧</u>
-        <div class="btn-container">
-          <a href="#" class="btn" style="background-color:#ffffff;"><b>利用者情報</b></a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </nav>
 
-  <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
-    <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
-  </footer>
+    <div class="container mt-5">
+        <h1>遺失物管理システム：申請者情報</h1>
+        <form>
+            <table class="table">
+                <tr>
+                    <td colspan="2"><h2>拾得物受け取り申請者情報：</h2></td>
+                </tr>
+                <tr>
+                    <td>氏名</td>
+                    <td><input type="text" name="name" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>学籍番号</td>
+                    <td><input type="text" name="student_id" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td><input type="text" name="phone" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td>
+                    <td><input type="email" name="email" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>受け取り希望日</td>
+                    <td><input type="date" name="pickup_date" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>希望時間</td>
+                    <td><input type="time" name="pickup_time" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>備考</td>
+                    <td><textarea name="remarks" class="form-control"></textarea></td>
+                </tr>
+            </table>
+            <button type="submit" class="btn btn-primary">送信</button>
+            <button type="button" class="btn btn-secondary">戻る</button>
+        </form>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
+    <footer class="fixed-bottom text-light text-end" style="background-color: #89c7fa;">
+        <div class="container">
+            文教大学 情報学部 情報システム学科 プロジェクト演習B
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
 </html>
