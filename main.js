@@ -8,7 +8,7 @@ function get_fitem(tag_id, key_id){
     $.each(j, function(i,v){
       if(v["物品名"].indexOf(key)>-1){
         src += "<tr>";
-        src += "<td>" + v["大分類"] + "</td>";
+        src += "<td>" + v["分類"] + "</td>";
         src += "<td>" + v["物品名"] + "</td>";
         src += "<td>" + v["拾得場所"] + "</td>";
         src += "<td>" + v["色"] + "</td>";
