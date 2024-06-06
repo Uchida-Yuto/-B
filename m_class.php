@@ -43,8 +43,8 @@ class find_item_list extends data_list{
 class find_item_detail extends data_list{
   var $変更履歴=array();
   function __construct($fid){
-    $sql  = "SELECT 拾得物分類.大分類, 拾得物分類.物品名, ";
-    $sql .= "拾得物.ID, 拾得物.拾得場所, 拾得物.色, 拾得物.特徴, 拾得物.画像  ";
+    $sql  = "SELECT 拾得物分類.分類, 拾得物分類.物品名, ";
+    $sql .= "拾得物.ID, 拾得物.拾得場所, 拾得物.色,  拾得物.画像  ";
     $sql .= "FROM 拾得物 ";
     $sql .= "INNER JOIN 拾得物分類 ON 拾得物.拾得物分類ID=拾得物分類.ID ";
     $sql .= "WHERE 拾得物.ID={$fid};";
