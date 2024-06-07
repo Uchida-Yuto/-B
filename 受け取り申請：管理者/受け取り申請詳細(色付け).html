@@ -8,68 +8,75 @@
     <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>拾得物管理システム</title>
+    <style>
+      .title-box {
+        border: 2px solid #000; /* 枠線 */
+        padding: 5px 10px; /* 内側の余白 */
+        display: inline-block; 
+        color: #000;
+        margin-top: 10px;
+    }
+    </style>
   </head>
+  
   <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #89c7fa">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: #070707">文教大学拾得物管理システム</a>
+        <a class="navbar-brand" href="#" style="color: #070707">文教大学拾得物管理システム：受け取り申請詳細</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
         <span class="navbar-toggler-icon" style="color: black"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707">
           <div class="navbar-nav" style="color: #070707">
-            <a class="nav-link active" aria-current="page" href="#" style="color: #070707"><u>情報編集</u></a> <!-- href="繋がるページのリンク" -->
-            <a class="nav-link" href="#" style="color: #070707"><u>利用者一覧</u></a>                             <!-- 制作するページによって<u>・no text</u>部分のテキストの変更 -->
+            <a class="nav-link active" aria-current="page" href="#" style="color: #070707"><u>・情報編集</u></a>
+            <a class="nav-link" href="#" style="color: #070707"><u>・利用者一覧</u></a>
+            <a class="nav-link" href="#" style="color: #070707"><u>・管理者メニュー</u></a>
           </div>
         </div>
       </div>
     </nav>
-
-    <div class="container mt-5">
-        <h1>遺失物管理システム：申請者情報</h1>
-        <form>
-            <table class="table">
-                <tr>
-                    <td colspan="2"><h2>拾得物受け取り申請者情報：</h2></td>
-                </tr>
-                <tr>
-                    <td>氏名</td>
-                    <td><input type="text" name="name" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td>学籍番号</td>
-                    <td><input type="text" name="student_id" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td>電話番号</td>
-                    <td><input type="text" name="phone" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td>メールアドレス</td>
-                    <td><input type="email" name="email" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td>受け取り希望日</td>
-                    <td><input type="date" name="pickup_date" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td>希望時間</td>
-                    <td><input type="time" name="pickup_time" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td>備考</td>
-                    <td><textarea name="remarks" class="form-control"></textarea></td>
-                </tr>
-            </table>
-            <button type="submit" class="btn btn-primary">送信</button>
-            <button type="button" class="btn btn-secondary">戻る</button>
-        </form>
+    <div class="container mt-3">
+      <div class="title-box">
+        <b>拾得物受け取り申請者情報</b>
+      </div>
+      <form>
+          <table class="table mt-3">
+              <tr>
+                  <td>氏名</td>
+                  <td><input type="text" name="name" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>学籍番号</td>
+                  <td><input type="text" name="student_id" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>電話番号</td>
+                  <td><input type="text" name="phone" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>メールアドレス</td>
+                  <td><input type="email" name="email" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>受け取り希望日</td>
+                  <td><input type="date" name="pickup_date" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>希望時間</td>
+                  <td><input type="time" name="pickup_time" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>備考</td>
+                  <td><textarea name="remarks" class="form-control"></textarea></td>
+              </tr>
+          </table>
+          <button type="submit" class="btn btn-primary">送信</button>
+          <button type="button" class="btn btn-secondary">戻る</button>
+      </form>
     </div>
 
-    <footer class="fixed-bottom text-light text-end" style="background-color: #89c7fa;">
-        <div class="container">
-            文教大学 情報学部 情報システム学科 プロジェクト演習B
-        </div>
+    <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
+      <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
