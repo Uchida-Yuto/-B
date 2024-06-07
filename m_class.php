@@ -9,7 +9,7 @@ class data_list{
   }
   function getList(){
     $dsn = "mysql:dbname=probc2024;host=localhost";
-    $my = new PDO($dsn, 'probc2024', 'probc2024');
+    $my = new PDO($dsn,'probc2024','probc2024');
     $arr = $my->query($this->sql);
     return($arr);
   }
@@ -43,8 +43,8 @@ class find_item_list extends data_list{
 class find_item_detail extends data_list{
   var $変更履歴=array();
   function __construct($fid){
-    $sql  = "SELECT 拾得物分類.大分類, 拾得物分類.物品名, ";
-    $sql .= "拾得物.ID, 拾得物.拾得場所, 拾得物.色, 拾得物.特徴, 拾得物.画像  ";
+    $sql  = "SELECT 拾得物分類.分類, 拾得物分類.物品名, ";
+    $sql .= "拾得物.ID, 拾得物.拾得場所, 拾得物.色,  拾得物.画像  ";
     $sql .= "FROM 拾得物 ";
     $sql .= "INNER JOIN 拾得物分類 ON 拾得物.拾得物分類ID=拾得物分類.ID ";
     $sql .= "WHERE 拾得物.ID={$fid};";
@@ -71,7 +71,7 @@ class find_item_detail extends data_list{
 class user_list extends data_list{
   function __construct(){
     $sql  = "SELECT ユーザ.ID AS ユーザID, ユーザ.氏名, ユーザ.電話番号, ユーザ.メールアドレス, ";
-    $sql .= "所属.ID AS 所属ID, 所属.所属分類, 所属.所属名 ";
+    $sql .= "所属.ID AS 所属ID, 所属.所属分類, 所属.所属, 所属.学籍番号 ";
     $sql .= "FROM ユーザ INNER JOIN 所属 ON ユーザ.所属ID=所属.ID ";
     $sql .= "ORDER BY ユーザID ASC;";
     $this->setSQL($sql);

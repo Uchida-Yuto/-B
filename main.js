@@ -2,7 +2,7 @@ var API_URL = "http://localhost/probc/c_json.php";
 
 function get_fitem(tag_id, key_id){
   $.getJSON(API_URL, {type:"json", data:"find_item"}, function(j){
-    var src = "<table class='table table-success table-striped'><tr><th>大分類</th><th>物品名</th><th>拾得場所</th><th>色</th><th>特徴</th><th>日時</th><th>状態</th><th>操作</th></tr>";
+    var src = "<table class='table table-success table-striped'><tr><th>分類</th><th>物品名</th><th>拾得場所</th><th>色</th><th>特徴</th><th>日時</th><th>状態</th><th>操作</th></tr>";
     cnt=0;
     key=$("#"+key_id).val();
     $.each(j, function(i,v){
