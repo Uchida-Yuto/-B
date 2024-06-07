@@ -18,46 +18,58 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707">
           <div class="navbar-nav" style="color: #070707">
-            <a class="nav-link active" aria-current="page" href="#" style="color: #070707"><u>情報編集</u></a> <!-- href="繋がるページのリンク" -->
-            <a class="nav-link" href="#" style="color: #070707"><u>利用者一覧</u></a>                             <!-- 制作するページによって<u>・no text</u>部分のテキストの変更 -->
+            <a class="nav-link active" aria-current="page" href="#" style="color: #070707"><u>情報編集</u></a>
+            <a class="nav-link" href="#" style="color: #070707"><u>利用者一覧</u></a>
           </div>
         </div>
       </div>
     </nav>
 
     <div class="container mt-5">
-        <h1>遺失物管理システム：捜索届詳細</h1>
+        <h1>遺失物管理システム：利用者情報</h1>
+
+        <!-- 追加するリンクセクション -->
+        <div class="mb-4">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item flex-fill text-center"><a href="#" class="text-decoration-none">・トップページ</a></li>
+                <li class="list-group-item flex-fill text-center"><a href="#" class="text-decoration-none">・拾得物登録</a></li>
+                <li class="list-group-item flex-fill text-center"><a href="#" class="text-decoration-none">・捜索届依頼</a></li>
+                <li class="list-group-item flex-fill text-center"><a href="#" class="text-decoration-none">・拾得物一覧</a></li>
+                <li class="list-group-item flex-fill text-center"><a href="#" class="text-decoration-none">・ユーザー情報</a></li>
+            </ul>
+        </div>
+
         <form>
             <table class="table">
                 <tr>
-                    <td colspan="2"><h2>捜索詳細：</h2></td>
+                    <td colspan="2"><h2>利用者詳細：</h2></td>
                 </tr>
                 <tr>
-                    <td>物品名</td>
+                    <td>氏名</td>
                     <td><input type="text" name="name" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td>物品分類</td>
+                    <td>所属</td>
                     <td><input type="text" name="student_id" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td>色</td>
+                    <td>学部学科</td>
                     <td><input type="text" name="phone" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td>特徴</td>
+                    <td>学籍番号</td>
                     <td><input type="email" name="email" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td>遺失日</td>
-                    <td><input type="date" name="pickup_date" class="form-control"></td>
+                    <td>電話番号</td>
+                    <td><input type="text" name="phone" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td>遺失時間</td>
-                    <td><input type="time" name="pickup_time" class="form-control"></td>
+                    <td>メールアドレス</td>
+                    <td><input type="text" name="email" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td>遺失場所</td>
+                    <td>備考</td>
                     <td><textarea name="remarks" class="form-control"></textarea></td>
                 </tr>
             </table>
