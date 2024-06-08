@@ -14,7 +14,7 @@
     
     <nav class="navbar navbar-expand-lg " style="background-color: #a4d6ff">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：受け取り申請画面</a>
+        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：拾得物一覧表</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
         <span class="navbar-toggler-icon" style="color: black" > 
         </button>
@@ -29,9 +29,16 @@
       </div>
     </nav>
 <style>
-  .registration-form {
+  .title-box {
+    border: 2px solid #000; /* 枠線 */
+    padding: 5px 10px; /* 内側の余白 */
+    display: inline-block; 
+    color: #000;
+    margin: 0px;
+  }
   
-    font-size: 12px;
+  .registration-form {
+  font-size: 12px;
   width: fit-content;
   padding: 20px;
   background: #dadada;
@@ -80,11 +87,13 @@ textarea {
   }
   </style>
     
+    <div class="container mt-3">
+      <div class="title-box">
+        <b>受け取り申請</b>
+      </div>
     <div class="registration-form"  >
 
       <form action="#" method="post">
-        <h2><u>拾得物受け取り申請画面</u></h2>
-    
         <label for="name">氏名：</label>
         <input id="ユーザ" type="text" name="name" >
 
