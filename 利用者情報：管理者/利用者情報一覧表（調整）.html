@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>文教大学拾得物管理システム：拾得物一覧編集</title>
+    <title>拾得物管理システム：利用者一覧</title>
   </head>
  
   <body>
@@ -15,16 +15,15 @@
     
     <nav class="navbar navbar-expand-lg " style="background-color: #a4d6ff">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：拾得物一覧編集</a>
+        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：利用者一覧表</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
         <span class="navbar-toggler-icon" style="color: black" > 
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707">
           <div class="navbar-nav" style="color: #070707" >
-            <a class="nav-link active" aria-current="page" href="#" style="color: #070707" ><u>・拾得物情報登録</u></a> <!-- href="繋がるページのリンク" -->
-            <a class="nav-link" href="#" style="color: #070707"><u>・受け取り申請一覧</u></a>                             <!-- 制作するページによって<u>・no text</u>部分のテキストの変更 -->
-            <a class="nav-link" href="#" style="color: #070707"><u>・捜索依頼届一覧</u></a>
-            <a class="nav-link" href="#" style="color: #070707"><u>・利用者情報</u></a>
+            <a class="nav-link active" aria-current="page" href="#" style="color: #070707" ><u>・受け取り申請一覧</u></a> <!-- href="繋がるページのリンク" -->
+            <a class="nav-link" href="#" style="color: #070707"><u>・拾得物一覧編集</u></a>                             <!-- 制作するページによって<u>・no text</u>部分のテキストの変更 -->
+            <a class="nav-link" href="#" style="color: #070707"><u>・管理者メニュー</u></a>
           </div>
         </div>
       </div>
@@ -33,12 +32,12 @@
     <style>
 
       .flex_test-box {
-            background-color: #ddd8d8cf;     /* 背景色指定 */
+            background-color:  #ddd8d8cf;    /* 背景色指定 */
             padding:  10px;             /* 余白指定 */
             display: flex;              /* フレックスボックスにする */
             justify-content:center;
         }
-   
+      
         article {
 	          display: flex;
 	          margin-bottom: 20px;
@@ -47,16 +46,17 @@
 	          box-sizing: border-box;
 	          box-shadow: 0 0 5px #999;
         }
-	article figure {
+	      article figure {
 		      margin-right: 20px;
 		      width: 100px;
 		      height: 100px;
 	     }
-article figure img {
+        article figure img {
 			   min-width: 100px;
 			   max-width: 100%;
 			   vertical-align: top;
 		   }
+
           </style>
 
     <div class="flex_test-box">
@@ -64,7 +64,7 @@ article figure img {
         <div>
             <input
             type="date"
-            id="拾得時間"
+            id="mySearch"
             name="q"
             required />
             <input type="search" name="search" autocomplete="on" list="list">
@@ -87,41 +87,9 @@ article figure img {
         </div>
       </form>
     </div>
-
+    
     <article>
-      <figure>
-        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
-      </figure>
-      <div class="text_content">
-        <p class="text_date"><time datetime="2018-08-01"></time>2018年8月3日</p>
-        <h2><a href="#">物品名</a></h2>
-        <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
-      </div>
-    </article>
-    <article>
-      <figure>
-        <img src="./images/pic_thumb2.jpg" alt="サムネイル画像">
-      </figure>
-      <div class="text_content">
-        <p class="text_date"><time datetime="2018-08-03">2018年8月3日</time></p>
-        <h2><a href="#">物品名</a></h2>
-        <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
-      </div>
-    </article>
-    <article>
-      <figure>
-        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
-      </figure>
-      <div class="text_content">
-        <p class="text_date"><time datetime="2018-08-05">2018年8月5日</time></p>
-        <h2><a href="#">物品名</a></h2>
-        <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
-      </div>
-      </article>
-      <article>
-      <figure>
-        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
-      </figure>
+      
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-01">2018年8月1日</time></p>
         <h2><a href="#">物品名</a></h2>
@@ -129,9 +97,6 @@ article figure img {
       </div>
     </article>
     <article>
-      <figure>
-        <img src="./images/pic_thumb2.jpg" alt="サムネイル画像">
-      </figure>
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-03">2018年8月3日</time></p>
         <h2><a href="#">物品名</a></h2>
@@ -139,9 +104,27 @@ article figure img {
       </div>
     </article>
     <article>
-      <figure>
-        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
-      </figure>
+      <div class="text_content">
+        <p class="text_date"><time datetime="2018-08-05">2018年8月5日</time></p>
+        <h2><a href="#">物品名</a></h2>
+        <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+      </div>
+      </article>
+      <article>
+      <div class="text_content">
+        <p class="text_date"><time datetime="2018-08-01">2018年8月1日</time></p>
+        <h2><a href="#">物品名</a></h2>
+        <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+      </div>
+    </article>
+    <article>
+      <div class="text_content">
+        <p class="text_date"><time datetime="2018-08-03">2018年8月3日</time></p>
+        <h2><a href="#">物品名</a></h2>
+        <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+      </div>
+    </article>
+    <article>
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-05">2018年8月5日</time></p>
         <h2><a href="#">物品名</a></h2>
@@ -160,7 +143,7 @@ article figure img {
 
     
 
-    <footer class="fixed-bottom" style="background-color: #a4d6ff" text-light text-end>
+    <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
         <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
     </footer>
 
