@@ -7,69 +7,74 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>拾得物管理システム：捜索依頼届一覧</title>
+    <title>文教大学拾得物管理システム：拾得物一覧編集</title>
   </head>
  
   <body>
-
-    
-    <nav class="navbar navbar-expand-lg " style="background-color: #a4d6ff">
+    <nav class="navbar navbar-expand-lg" style="background-color: #a4d6ff">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: #070707" >文教大学拾得物管理システム：捜索依頼届一覧表</a>
+        <a class="navbar-brand" href="#" style="color: #070707">文教大学拾得物管理システム：拾得物一覧編集</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
-        <span class="navbar-toggler-icon" style="color: black" > 
+        <span class="navbar-toggler-icon" style="color: black"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707">
-          <div class="navbar-nav" style="color: #070707" >
-            <a class="nav-link active" aria-current="page" href="#" style="color: #070707" ><u>・拾得物情報登録</u></a> <!-- href="繋がるページのリンク" -->
-            <a class="nav-link" href="#" style="color: #070707"><u>・捜索依頼届</u></a>                             <!-- 制作するページによって<u>・no text</u>部分のテキストの変更 -->
-            <a class="nav-link" href="#" style="color: #070707"><u>・拾得物一覧</u></a>
-            <a class="nav-link" href="#" style="color: #070707"><u>・ユーザー情報</u></a>
+          <div class="navbar-nav" style="color: #070707">
+            <a class="nav-link active" aria-current="page" href="#" style="color: #070707"><u>・受け取り申請一覧</u></a>
+            <a class="nav-link" href="#" style="color: #070707"><u>・利用者情報一覧</u></a>
+            <a class="nav-link" href="#" style="color: #070707"><u>・管理者メニュー</u></a>
           </div>
         </div>
       </div>
     </nav>
 
     <style>
-
       .flex_test-box {
-            background-color:  #ddd8d8cf;    /* 背景色指定 */
-            padding:  10px;             /* 余白指定 */
-            display: flex;              /* フレックスボックスにする */
-            justify-content:center;
-        }
-      
-        article {
-	          display: flex;
-	          margin-bottom: 20px;
-	          padding: 20px;
-	          border-radius: 5px;
-	          box-sizing: border-box;
-	          box-shadow: 0 0 5px #999;
-        }
-	      article figure {
-		      margin-right: 20px;
-		      width: 100px;
-		      height: 100px;
-	     }
-        article figure img {
-			   min-width: 100px;
-			   max-width: 100%;
-			   vertical-align: top;
-		   }
-
-          </style>
+        background-color: #ddd8d8cf;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+      }
+   
+      article {
+        display: flex;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #999;
+        position: relative;
+      }
+      article figure {
+        margin-right: 20px;
+        width: 100px;
+        height: 100px;
+      }
+      article figure img {
+        min-width: 100px;
+        max-width: 100%;
+        vertical-align: top;
+      }
+      .edit-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: #a4d6ff;
+        border-color: #a4d6ff;
+        color: #070707;
+        border: 2px solid #000; /* 枠線 */        
+      }
+      .edit-btn:hover {
+        background-color: #82c4ff;
+        border-color: #82c4ff;
+      }
+    </style>
 
     <div class="flex_test-box">
       <form>
         <div>
-            <input
-            type="date"
-            id="mySearch"
-            name="q"
-            required />
-            <input type="search" name="search" autocomplete="on" list="list">
-            <datalist id="list">
+          <input type="date" id="拾得時間" name="q" required />
+          <input type="search" name="search" autocomplete="on" list="list">
+          <datalist id="list">
             <option value="現金">
             <option value="かばん類">
             <option value="袋・封筒類">
@@ -82,54 +87,81 @@
             <option value="電気製品類">
             <option value="貴金属類">
             <option value="その他">
-            </datalist>
-            <input type="submit" value="検索">
-          
+          </datalist>
+          <input type="submit" value="検索">
         </div>
       </form>
     </div>
-    
+
     <article>
-      
+      <figure>
+        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
+      </figure>
       <div class="text_content">
-        <p class="text_date"><time datetime="2018-08-01">2018年8月1日</time></p>
+        <p class="text_date"><time datetime="2018-08-01"></time>2018年8月3日</p>
         <h2><a href="#">物品名</a></h2>
         <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+        <button class="btn edit-btn">編集</button>
       </div>
     </article>
+
     <article>
+      <figure>
+        <img src="./images/pic_thumb2.jpg" alt="サムネイル画像">
+      </figure>
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-03">2018年8月3日</time></p>
         <h2><a href="#">物品名</a></h2>
         <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+        <button class="btn edit-btn">編集</button>
       </div>
     </article>
+
     <article>
+      <figure>
+        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
+      </figure>
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-05">2018年8月5日</time></p>
         <h2><a href="#">物品名</a></h2>
         <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+        <button class="btn edit-btn">編集</button>
       </div>
-      </article>
-      <article>
+    </article>
+
+    <article>
+      <figure>
+        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
+      </figure>
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-01">2018年8月1日</time></p>
         <h2><a href="#">物品名</a></h2>
         <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+        <button class="btn edit-btn">編集</button>
       </div>
     </article>
+
     <article>
+      <figure>
+        <img src="./images/pic_thumb2.jpg" alt="サムネイル画像">
+      </figure>
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-03">2018年8月3日</time></p>
         <h2><a href="#">物品名</a></h2>
         <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+        <button class="btn edit-btn">編集</button>
       </div>
     </article>
+
     <article>
+      <figure>
+        <img src="./images/pic_thumb1.jpg" alt="サムネイル画像">
+      </figure>
       <div class="text_content">
         <p class="text_date"><time datetime="2018-08-05">2018年8月5日</time></p>
         <h2><a href="#">物品名</a></h2>
         <p class="text_excerpt">画像とテキストコンテンツを左右に並べたレイアウト。画像とテキストコンテンツを左右に並べたレイアウト。</p>
+        <button class="btn edit-btn">編集</button>
       </div>
     </article>
 
@@ -139,13 +171,10 @@
       <li class="page-item"><a class="page-link" href="#">2</a></li>
       <li class="page-item"><a class="page-link" href="#">3</a></li>
       <li class="page-item"><a class="page-link" href="#">次のページ→</a></li>
-   </ul>
-    
+    </ul>
 
-    
-
-    <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
-        <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
+    <footer class="fixed-bottom" style="background-color: #a4d6ff">
+      <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
@@ -153,4 +182,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </body>
 </html>
-
