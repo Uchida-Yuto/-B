@@ -44,7 +44,7 @@ class find_item_detail extends data_list{
   var $変更履歴=array();
   function __construct($fid){
     $sql  = "SELECT 拾得物分類.分類, 拾得物分類.物品名, ";
-    $sql .= "拾得物.ID, 拾得物.拾得場所, 拾得物.色,  拾得物.画像  ";
+    $sql .= "拾得物.ID, 拾得物.拾得場所, 拾得物.色, 拾得物.画像, 拾得物.特長 ";
     $sql .= "FROM 拾得物 ";
     $sql .= "INNER JOIN 拾得物分類 ON 拾得物.拾得物分類ID=拾得物分類.ID ";
     $sql .= "WHERE 拾得物.ID={$fid};";
@@ -55,6 +55,7 @@ class find_item_detail extends data_list{
     $sql .= "FROM 拾得物管理状況 ";
     $sql .= "INNER JOIN ユーザ ON 拾得物管理状況.ユーザID=ユーザ.ID ";
     $sql .= "WHERE 拾得物管理状況.拾得物ID={$fid} ";
+    
     $sql .= "ORDER BY 拾得物管理状況.変更日時 ASC;";
     $this->setSQL($sql);
     $arr = $this->getList();
