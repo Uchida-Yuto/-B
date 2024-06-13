@@ -23,7 +23,20 @@
         <div class="col mt-1">
             <form class="needs-validation" novalidate method="post" action="c_insert.php" enctype="multipart/form-data">
             <table>
-                <tr><td>拾得物分類</td><td><select class="category" name="p1"></select></td></tr>
+                <tr><td>拾得物分類</td><td><select class="category" name="p1">
+                  <option value="現金">現金</option>
+                  <option value="かばん類">かばん類</option>
+                  <option value="袋・封筒類">袋・封筒類</option>
+                  <option value="財布類">財布類</option>
+                  <option value="鍵類">鍵類</option>
+                  <option value="手帳・文具類">手帳・文具類</option>
+                  <option value="書類・紙類">書類・紙類</option>
+                  <option value="時計類">時計類</option>
+                  <option value="傘">傘</option>
+                  <option value="電気製品類">電気製品類</option>
+                  <option value="貴金属類">貴金属類</option>
+                  <option value="その他">その他</option>
+                </select></td></tr>
                 <tr><td>拾得場所</td><td><input type="text" required class="form-control" name="p2"></td></tr>
                 <tr><td>色</td><td><input type="text" required class="form-control" name="p3"></td></tr>
                 <tr><td>特徴</td><td><input type="text" required class="form-control" name="p4"></td></tr>
