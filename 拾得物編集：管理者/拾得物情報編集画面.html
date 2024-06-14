@@ -3,18 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
-    .title-box {
-      border: 2px solid #000; /* 枠線 */
-      padding: 5px 10px; /* 内側の余白 */
-      display: inline-block; 
-      color: #000;
-      margin: 0px;
-      }
     body {
       font-family: Arial, sans-serif;
     }
@@ -71,35 +61,38 @@
       width: 100%;
       margin-bottom: 10px;
     }
-    .textarea-container h2 {
-      font-size: 1rem;
+    .title-box {
+      border: 2px solid #000; /* 枠線 */
+      padding: 5px 10px; /* 内側の余白 */
+      display: inline-block; 
+      color: #000;
+      margin-top: 10px;
     }
   </style>
-  <title>拾得物管理システム：拾得物詳細</title>
+  <title>拾得物管理システム：拾得物詳細編集</title>
 </head>
 <body>
+  <!-- 新しいナビゲーションメニューを追加 -->
   <nav class="navbar navbar-expand-lg" style="background-color: #89c7fa">
     <div class="container-fluid">
-      <a class="navbar-brand" href="file:///C:/xampp/htdocs/probc/%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8%20.html" style="color: #070707">文教大学拾得物管理システム：拾得物一覧表</a>
+      <a class="navbar-brand" href="管理者ページ.html" style="color: #070707">文教大学拾得物管理システム/管理者メニュー：拾得物詳細一覧表</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #070707">
       <span class="navbar-toggler-icon" style="color: black"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #070707">
         <div class="navbar-nav" style="color: #070707">
-          <a class="nav-link active" aria-current="page" href="#" style="color: #070707"><u>・利用登録</u></a>
-          <a class="nav-link" href="#" style="color: #070707"><u>・ユーザー情報</u></a>
-          <a class="nav-link" href="#" style="color: #070707"><u>・捜索依頼届一覧</u></a>
-          <a class="nav-link" href="file:///C:/xampp/htdocs/probc/%E6%8B%BE%E5%BE%97%E7%89%A9%E7%99%BB%E9%8C%B2%E7%94%BB%E9%9D%A2.html" style="color: #070707"><u>・拾得物情報登録</u></a>
-          <a class="nav-link" href="#" style="color: #070707"><u>・捜索依頼届</u></a>
+          <a class="nav-link active" aria-current="page" href="受け取り申請一覧表.html" style="color: #070707"><u>・受け取り申請一覧</u></a>
+          <a class="nav-link" href="利用者情報一覧表.html" style="color: #070707"><u>・利用者情報一覧</u></a>
+          <a class="nav-link" href="管理者ページ.html" style="color: #070707"><u>・管理者メニュー</u></a>
         </div>
       </div>
     </div>
   </nav>
 
-
+  <!-- コンテンツ部分 -->
   <div class="container mt-3">
     <div class="title-box">
-      <b>拾得物詳細</b>
+      <b>拾得物詳細編集</b>
     </div>
 
     <div class="content">
@@ -110,9 +103,11 @@
         <div class="textarea-container">
           <h2>連絡事項：</h2>
           <textarea rows="4"></textarea>
+          <button>追加</button>
         </div>
       </div>
       <div class="details">
+        <h2>拾得物詳細：</h2>
         <table>
           <tr>
             <td>物品名</td>
@@ -152,15 +147,11 @@
 
     <div class="buttons">
       <button>←前のページへ戻る</button>
+      <button>編集完了</button>
     </div>
   </div>
 
-  <footer class="fixed-bottom" style="background-color: #a4d6ff;" text-light text-end>
-    <div>文教大学 情報学部 情報システム学科 プロジェクト演習B</div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <!-- スクリプト -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
