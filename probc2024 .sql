@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2024-06-15 12:52:27
+-- 生成日時: 2024-06-15 19:34:06
 -- サーバのバージョン： 10.4.32-MariaDB
 -- PHP のバージョン: 8.2.12
 
@@ -41,6 +41,21 @@ CREATE TABLE `ユーザ` (
 
 INSERT INTO `ユーザ` (`ID`, `所属ID`, `氏名`, `電話番号`, `メールアドレス`) VALUES
 (6883, 0, '佐藤', '35938', 'bunkyo.ac.jp');
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `受け取り申請情報`
+--
+
+CREATE TABLE `受け取り申請情報` (
+  `ID` int(11) NOT NULL,
+  `拾得物ID` int(11) NOT NULL,
+  `学籍番号` varchar(50) NOT NULL,
+  `受け取り希望日時` date NOT NULL,
+  `希望時間` time NOT NULL,
+  `備考` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -151,6 +166,13 @@ ALTER TABLE `ユーザ`
   ADD KEY `所属ID` (`所属ID`);
 
 --
+-- テーブルのインデックス `受け取り申請情報`
+--
+ALTER TABLE `受け取り申請情報`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `拾得物ID` (`拾得物ID`);
+
+--
 -- テーブルのインデックス `所属`
 --
 ALTER TABLE `所属`
@@ -202,6 +224,12 @@ ALTER TABLE `ユーザ`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6884;
 
 --
+-- テーブルの AUTO_INCREMENT `受け取り申請情報`
+--
+ALTER TABLE `受け取り申請情報`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- テーブルの AUTO_INCREMENT `所属`
 --
 ALTER TABLE `所属`
@@ -240,6 +268,12 @@ ALTER TABLE `遺失物捜索依頼`
 --
 -- ダンプしたテーブルの制約
 --
+
+--
+-- テーブルの制約 `受け取り申請情報`
+--
+ALTER TABLE `受け取り申請情報`
+  ADD CONSTRAINT `受け取り申請情報_ibfk_1` FOREIGN KEY (`拾得物ID`) REFERENCES `拾得物` (`ID`);
 
 --
 -- テーブルの制約 `拾得物`
