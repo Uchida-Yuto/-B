@@ -120,7 +120,7 @@ class lostitem_category_list extends data_list{
 //所属保持用クラス
 class belongs_list extends data_list{
   function __construct(){
-    $sql  = "SELECT 所属.ID AS 所属ID, 所属分類, 所属名 ";
+    $sql  = "SELECT 所属.ID AS 所属ID, 所属分類, 所属 ";
     $sql .= "FROM 所属 ";
     $sql .= "ORDER BY 所属ID;";
     $this->setSQL($sql);
