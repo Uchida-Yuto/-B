@@ -72,7 +72,7 @@ class find_item_detail extends data_list{
 class user_list extends data_list{
   function __construct(){
     $sql  = "SELECT ユーザ.ID AS ユーザID, ユーザ.氏名, ユーザ.電話番号, ユーザ.メールアドレス, ";
-    $sql .= "所属.ID AS 所属ID, 所属.所属分類, 所属.所属, 所属.学籍番号 ";
+    $sql .= "所属.ID AS 所属ID, 所属.所属分類, 所属.学籍番号 ";
     $sql .= "FROM ユーザ INNER JOIN 所属 ON ユーザ.所属ID=所属.ID ";
     $sql .= "ORDER BY ユーザID ASC;";
     $this->setSQL($sql);
@@ -120,7 +120,7 @@ class lostitem_category_list extends data_list{
 //所属保持用クラス
 class belongs_list extends data_list{
   function __construct(){
-    $sql  = "SELECT 所属.ID AS 所属ID, 所属分類, 所属 ";
+    $sql  = "SELECT 所属.ID AS 所属ID, 所属分類, 所属名 ";
     $sql .= "FROM 所属 ";
     $sql .= "ORDER BY 所属ID;";
     $this->setSQL($sql);

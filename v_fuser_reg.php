@@ -24,13 +24,7 @@
             <form class="needs-validation" novalidate method="post" action="c_insert.php">
             <table>
                 <tr><td>氏名</td><td><input type="text" required class="form-control" name="p1"></td></tr>
-                <tr><td>所属</td><td><select class="belongs" name="p2">
-                <option value="大学職員">大学職員</option>
-                <option value="情報学部システム学科学生">情報学部システム学科学生</option>
-                <option value="情報学部情報社会学科学生">情報学部システム学科学生</option>
-                <option value="情報学部メディア表現学科学生">情報学部メディア表現学科学生</option>
-                <option value="健康学部管理栄養学科学生">健康学部管理栄養学科学生</option>
-                </select></td></tr>
+                <tr><td>所属</td><td><select class="belongs" name="p2"></select></td></tr>
                 <tr><td>電話番号</td><td><input type="tel" required class="form-control" name="p3"></td></tr>
                 <tr><td>メールアドレス</td><td><input type="email" required class="form-control" name="p4"></td></tr>
             </table>
