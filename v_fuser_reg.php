@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ja">
 <head>
-    <?php include("./html/meta.htm"); ?>
+    <?php include("meta.htm"); ?>
     <title>拾得物管理システム</title>
   </head>
 
 <body>
-  <?php include("./html/header.htm"); ?>
+  <?php include("header.htm"); ?>
 
   <div class="container">
     <div class="row mt-3 mb-1">
@@ -37,6 +37,6 @@
   </div>
 
   <?php include("./html/footer.htm"); ?>
-  <script src="./js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

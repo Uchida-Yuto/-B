@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<?php include("./html/meta.htm"); ?>
+<?php include("meta.htm"); ?>
   <title>拾得物管理システム</title>
 </head>
 
 <body>
-  <?php include("C:\Users\user\group-B-1\group-B\テンプレート\共通テンプレート.html"); ?>
+  <?php include("header.htm"); ?>
   
   <div class="container">
     <div class="row mt-3 mb-1">
@@ -47,8 +47,8 @@ echo("<input type='hidden' name='p2' value='{$_REQUEST["id"]}'>");
     </div>
 
   </div>
-  <?php include("./html/footer.htm"); ?>
-  <script src="./js/main.js"></script>
+  <?php include("footer.htm"); ?>
+  <script src="main.js"></script>
 <?php
   $html = "<script>";
   $html .= "\$(function(){ get_fitem_detail(['r1','r2'],{$_REQUEST["id"]}) });";
