@@ -31,8 +31,8 @@
                 <option value="情報学部メディア表現学科学生">情報学部メディア表現学科学生</option>
                 <option value="健康学部管理栄養学科学生">健康学部管理栄養学科学生</option>
                 </select></td></tr>
-                <tr><td>電話番号</td><td><input type="text" required class="form-control" name="p3"></td></tr>
-                <tr><td>メールアドレス</td><td><input type="text" required class="form-control" name="p4"></td></tr>
+                <tr><td>電話番号</td><td><input type="tel" required class="form-control" name="p3"></td></tr>
+                <tr><td>メールアドレス</td><td><input type="email" required class="form-control" name="p4"></td></tr>
             </table>
             <button class="btn btn-success" id="btn">登録</button>
             <input type="hidden" name="data" value="user">

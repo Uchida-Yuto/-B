@@ -1,5 +1,5 @@
 nl=[];
-var API_URL = "c_json.php";
+var API_URL = "http://localhost/probc/c_json.php";
 
 function get_fitem(tag_id, key_id){
   $.getJSON(API_URL, {type:"json", data:"find_item"}, function(j){
